@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 public class DifficultySelectActivity extends AppCompatActivity {
 
@@ -23,7 +22,7 @@ public class DifficultySelectActivity extends AppCompatActivity {
     }
 
     private void openGame(String level) {
-        Intent intent = new Intent(this, ButtonModeActivity.class);
+        Intent intent = new Intent(this, TimerActivity.class);
         intent.putExtra("level", level);
         startActivity(intent);
     }

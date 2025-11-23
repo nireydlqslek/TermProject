@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".ButtonModeActivity"
+            android:name=".TimerActivity"
             android:exported="false" />
         <activity
             android:name=".DifficultySelectActivity"
