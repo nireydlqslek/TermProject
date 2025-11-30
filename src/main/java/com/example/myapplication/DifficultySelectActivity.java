@@ -1,9 +1,10 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DifficultySelectActivity extends AppCompatActivity {
 
@@ -16,9 +17,24 @@ public class DifficultySelectActivity extends AppCompatActivity {
         Button normal = findViewById(R.id.btnNormal);
         Button hard = findViewById(R.id.btnHard);
 
-        easy.setOnClickListener(v -> openGame("easy"));
-        normal.setOnClickListener(v -> openGame("normal"));
-        hard.setOnClickListener(v -> openGame("hard"));
+        easy.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TimerActivity.class);
+            intent.putExtra("difficulty", "easy");
+            startActivity(intent);
+        });
+
+        normal.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TimerActivity.class);
+            intent.putExtra("difficulty", "normal");
+            startActivity(intent);
+        });
+
+        hard.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TimerActivity.class);
+            intent.putExtra("difficulty", "hard");
+            startActivity(intent);
+        });
+
     }
 
     private void openGame(String level) {
